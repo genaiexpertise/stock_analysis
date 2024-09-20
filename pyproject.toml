@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "stock_analysis"
+version = "0.1.0"
+description = "stock_analysis using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.12,<=3.13"
+crewai = {extras = ["tools"], version = "^0.41.1"}
+python-dotenv = "^1.0.1"
+html2text = "^2024.2.26"
+sec-api = "^1.0.20"
+flask = "^3.0.3"
+flask-cors = "^5.0.0"
+flask-login = "^0.6.3"
+
+[tool.poetry.scripts]
+stock_analysis = "stock_analysis.main:run"
+run_crew = "stock_analysis.main:run"
+train = "stock_analysis.main:train"
+replay = "stock_analysis.main:replay"
+test = "stock_analysis.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
